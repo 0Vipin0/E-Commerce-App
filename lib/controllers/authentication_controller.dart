@@ -115,6 +115,7 @@ class AuthenticationController extends GetxController {
     isBusy = false;
     update();
     final SharedPreferences prefs = await SharedPreferences.getInstance();
+    Get.find<ProductsController>().items.clear();
     prefs.clear();
   }
 

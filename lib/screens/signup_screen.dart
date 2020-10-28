@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/screens/login_screen.dart';
 import 'package:ecommerce_app/utils/i18n.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,6 +7,7 @@ import '../controllers/authentication_controller.dart';
 import 'home_screen.dart';
 
 class SignUp extends StatelessWidget {
+  static String route = "signup";
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -48,7 +50,7 @@ class SignUp extends StatelessWidget {
                           controller
                               .signup(
                                   emailController.text, passwordController.text)
-                              .then((dynamic value) => Get.toNamed(Home.route))
+                              .then((dynamic value) => Get.offNamed(Home.route))
                               .catchError((dynamic error) {
                             Get.snackbar(
                               Messages.unable_signup.tr,
@@ -60,6 +62,12 @@ class SignUp extends StatelessWidget {
                         child: Text(Messages.signup_button.tr),
                       ),
               ),
+              FlatButton(
+                onPressed: () {
+                  Get.offNamed(Login.route);
+                },
+                child: Text(Messages.login_button.tr),
+              )
             ],
           ),
         ),

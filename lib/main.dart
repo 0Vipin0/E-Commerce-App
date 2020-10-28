@@ -1,6 +1,7 @@
 import 'package:ecommerce_app/utils/i18n.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:window_size/window_size.dart' as window_size;
 
 import 'controllers/authentication_controller.dart';
 import 'controllers/bindings/cart_binding.dart';
@@ -20,6 +21,8 @@ import 'screens/splash_screen.dart';
 import 'screens/user_products_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  window_size.setWindowTitle('E-Commerce App');
   Get.put<ThemeController>(ThemeController(), permanent: true);
   Get.put<LanguageController>(LanguageController(), permanent: true);
   runApp(MyApp());

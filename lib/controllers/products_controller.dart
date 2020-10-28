@@ -6,7 +6,6 @@ import 'package:http/http.dart' as http;
 
 import '../models/http_exception.dart';
 import '../models/product_model.dart';
-
 import 'authentication_controller.dart';
 
 enum FilterOptions {
@@ -57,12 +56,16 @@ class ProductsController extends GetxController {
       final dynamic favoriteData = json.decode(favoriteResponse.body);
       final List<ProductModel> loadedProducts = <ProductModel>[];
       extractedData.forEach((String prodId, dynamic prodData) {
+        bool isFavorite = false;
+        if (favoriteData != null) {
+          isFavorite = favoriteData[prodId] as bool;
+        }
         loadedProducts.add(ProductModel(
           id: prodId,
           title: prodData['title'] as String,
           description: prodData['description'] as String,
           price: prodData['price'] as double,
-          isFavorite: favoriteData[prodId] as bool ?? false,
+          isFavorite: isFavorite ?? false,
           imageUrl: prodData['imageUrl'] as String,
         ));
       });

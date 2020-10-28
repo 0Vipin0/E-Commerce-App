@@ -59,7 +59,7 @@ class Login extends StatelessWidget {
               ),
               FlatButton(
                 onPressed: () {
-                  Get.to(SignUp());
+                  Get.off(SignUp());
                 },
                 child: Text(Messages.signup_button.tr),
               )
