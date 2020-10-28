@@ -1,5 +1,3 @@
-import 'package:ecommerce_app/controllers/language_controller.dart';
-import 'package:ecommerce_app/controllers/theme_controller.dart';
 import 'package:ecommerce_app/utils/i18n.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,6 +8,8 @@ import 'controllers/bindings/edit_product_binding.dart';
 import 'controllers/bindings/home_binding.dart';
 import 'controllers/bindings/initial_bindings.dart';
 import 'controllers/bindings/order_binding.dart';
+import 'controllers/language_controller.dart';
+import 'controllers/theme_controller.dart';
 import 'screens/cart_screen.dart';
 import 'screens/edit_product_screen.dart';
 import 'screens/home_screen.dart';
@@ -20,6 +20,8 @@ import 'screens/splash_screen.dart';
 import 'screens/user_products_screen.dart';
 
 void main() {
+  Get.put<ThemeController>(ThemeController(), permanent: true);
+  Get.put<LanguageController>(LanguageController(), permanent: true);
   runApp(MyApp());
 }
 
