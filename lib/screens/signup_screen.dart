@@ -26,21 +26,66 @@ class SignUp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
-                decoration: InputDecoration(hintText: Messages.input_name.tr),
+                decoration: InputDecoration(
+                  hintText: Messages.input_name.tr,
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: const BorderSide(
+                      width: 1.5,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: const BorderSide(
+                      color: Colors.blue,
+                      width: 1.5,
+                    ),
+                  ),
+                ),
                 controller: nameController,
               ),
               const SizedBox(height: 40),
               TextFormField(
-                decoration: InputDecoration(hintText: Messages.input_email.tr),
+                decoration: InputDecoration(
+                  hintText: Messages.input_email.tr,
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: const BorderSide(
+                      width: 1.5,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: const BorderSide(
+                      color: Colors.blue,
+                      width: 1.5,
+                    ),
+                  ),
+                ),
                 controller: emailController,
               ),
               const SizedBox(height: 40),
               TextFormField(
-                decoration:
-                    InputDecoration(hintText: Messages.input_password.tr),
+                decoration: InputDecoration(
+                  hintText: Messages.input_password.tr,
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: const BorderSide(
+                      width: 1.5,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: const BorderSide(
+                      color: Colors.blue,
+                      width: 1.5,
+                    ),
+                  ),
+                ),
                 obscureText: true,
                 controller: passwordController,
               ),
+              const SizedBox(height: 10),
               GetBuilder<AuthenticationController>(
                 builder: (AuthenticationController controller) => controller
                         .isBusy
@@ -62,6 +107,7 @@ class SignUp extends StatelessWidget {
                         child: Text(Messages.signup_button.tr),
                       ),
               ),
+              const SizedBox(height: 10),
               FlatButton(
                 onPressed: () {
                   Get.offNamed(Login.route);
