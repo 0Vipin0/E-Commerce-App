@@ -38,3 +38,17 @@ class Constants {
 }
 ```
   - Run the project on any of the above devices.
+  
+## Screenshots
+
+### Mobile
+<img src="./screenshots/mobile-img-1.png" width="200" height ="400"> <img src="./screenshots/mobile-img-2.png" width="200" height ="400">
+<img src="./screenshots/mobile-img-3.png" width="200" height ="400"> <img src="./screenshots/mobile-img-4.png" width="200" height ="400">
+<img src="./screenshots/mobile-img-5.png" width="200" height ="400"> <img src="./screenshots/mobile-img-6.png" width="200" height ="400">
+<img src="./screenshots/mobile-img-7.png" width="200" height ="400"> <img src="./screenshots/mobile-img-8.png" width="200" height ="400">
+<img src="./screenshots/mobile-img-9.png" width="200" height ="400"> <img src="./screenshots/mobile-img-10.png" width="200" height ="400">
+
+### Windows
+<img src="./screenshots/img-1.JPG" width="800" height ="400"> <img src="./screenshots/img-2.JPG" width="800" height ="400">
+<img src="./screenshots/img-3.JPG" width="800" height ="400"> <img src="./screenshots/img-4.JPG" width="800" height ="400">
+<img src="./screenshots/img-5.JPG" width="800" height ="400"> <img src="./screenshots/img-6.JPG" width="800" height ="400">
