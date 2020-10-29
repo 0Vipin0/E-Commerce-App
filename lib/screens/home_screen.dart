@@ -1,8 +1,8 @@
-import 'package:ecommerce_app/controllers/language_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/cart_controller.dart';
+import '../controllers/language_controller.dart';
 import '../controllers/products_controller.dart';
 import '../controllers/theme_controller.dart';
 import '../models/product_model.dart';

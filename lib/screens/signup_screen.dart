@@ -1,9 +1,9 @@
-import 'package:ecommerce_app/screens/login_screen.dart';
-import 'package:ecommerce_app/utils/i18n.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/authentication_controller.dart';
+import '../screens/login_screen.dart';
+import '../utils/i18n.dart';
 import 'home_screen.dart';
 
 class SignUp extends StatelessWidget {
